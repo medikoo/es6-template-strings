@@ -11,7 +11,6 @@ var template = require('es6-template-strings');
 console.log(template('Hello ${place.toUpperCase()}!', { place: "World" }));
 
 // You can reuse same templates:
-
 var compile = require('es6-template-strings/compile')
   , resolveToString = require('es6-template-strings/resolve-to-string')
 
@@ -24,7 +23,6 @@ console.log(resolveToString(compiled, { siteName: "MySite", visitorNumber: 137 }
 console.log(resolveToString(compiled, { siteName: "OtherSite", visitorNumber: 777 }));
 
 // You may prepare custom tag functions
-
 var resolve = require('es6-template-strings/resolve');
 
 var customTag = function (literals/*, …substitutions*/) {
