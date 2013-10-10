@@ -1,0 +1,28 @@
+{
+  "name": "es6-template-strings",
+  "version": "0.0.0",
+  "description": "Compile and resolve template strings notation as specified in ES6",
+  "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
+  "scripts": {
+    "test": "node ./node_modules/tad/bin/tad"
+  },
+  "keywords": [
+    "es6",
+    "template",
+    "string",
+    "format",
+    "i18n",
+    "quasiliterals",
+    "multiline",
+    "localization",
+    "escape"
+  ],
+  "dependencies": {
+    "d": "git://github.com/medikoo/d.git",
+    "es5-ext": "git://github.com/medikoo/es5-ext.git"
+  },
+  "devDependencies": {
+    "tad": "~0.1.19"
+  },
+  "license": "MIT"
+}
