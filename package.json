@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "Compile and resolve template strings notation as specified in ES6",
   "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/medikoo/es6-template-strings.git"
+  },
   "scripts": {
     "test": "node ./node_modules/tad/bin/tad"
   },
