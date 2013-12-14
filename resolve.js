@@ -13,7 +13,7 @@ module.exports = function (data, context) {
 	names = keys(context);
 	return [data.literals].concat((new Function(names.join(', '),
 		'return [' + map.call(data.substitutions, function (expr) {
-			return 'String(' + expr + ')';
+			return expr ? '(' + expr + ')' : '\'\'';
 		}).join(', ') + '];')).apply(null,
 			names.map(function (name) { return context[name]; })));
 };
