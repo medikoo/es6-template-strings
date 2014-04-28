@@ -1,0 +1,9 @@
+v0.1.0  -- 2014.04.28
+* Assure strictly npm dependencies
+* Update dependencies to latest versions
+* Introduce resolution to array ('resolve-to-array', 'passthru-array' and 'to-array' modules)
+* Reuse same functions among compilation tasks
+* Do not stringify substitution on resolution
+
+v0.0.0  --  2013.10.10
+Initial (dev version)
