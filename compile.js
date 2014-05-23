@@ -19,6 +19,10 @@ sAhead = function (char) {
 		current = '';
 		return sIn;
 	}
+	if (char === '$') {
+		current += '$';
+		return sAhead;
+	}
 	current += '$' + char;
 	return sOut;
 };

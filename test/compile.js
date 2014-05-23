@@ -2,8 +2,8 @@
 
 module.exports = function (t, a) {
 	a.deep(t('${x.raz} \\${$\\{ f${prik()}oo ${maroko}\n\\$mis\\1k\\2o' +
-		'${markas()}${x.moled}ech${}eloo${x.su}elo${marko'),
-		{ literals: ['', ' ${$\\{ f', 'oo ', '\n$mis\\1k\\2o', '', 'ech', 'eloo',
+		'${markas()}${x.moled}ech${}eloo$${x.su}elo${marko'),
+		{ literals: ['', ' ${$\\{ f', 'oo ', '\n$mis\\1k\\2o', '', 'ech', 'eloo$',
 			'elo${marko'], substitutions: ['x.raz', 'prik()', 'maroko', 'markas()',
 				'x.moled', '', 'x.su'] }, "#1");
 
