@@ -28,13 +28,13 @@ module.exports = function (data, context) {
 				fn = new Function(argNames, body);
 			} catch (e) {
 				throw new TypeError("Unable to compile expression:\n\targs: " + stringify(argNames) +
-					"\n\n\tbody: " + stringify(body) + "\n\n\terror: " + e.stack);
+					"\n\tbody: " + stringify(body) + "\n\terror: " + e.stack);
 			}
 			try {
 				fn.apply(null, argValues);
 			} catch (e) {
 				throw new TypeError("Unable to resolve expression:\n\targs: " + stringify(argNames) +
-					"\n\n\tbody: " + stringify(body) + "\n\n\terror: " + e.stack);
+					"\n\tbody: " + stringify(body) + "\n\terror: " + e.stack);
 			}
 		});
 		throw e;
