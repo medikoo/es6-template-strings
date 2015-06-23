@@ -1,4 +1,11 @@
-v0.1.0  -- 2014.04.28
+v1.0.0  --  2015.06.23
+* Fix bug related to '$${' resolution
+* Improve error reporting
+* Fix spelling of LICENSE
+* Configure lint scripts
+* Drop support for v0.8 node ('^' in package.json dependencies)
+
+v0.1.0  --  2014.04.28
 * Assure strictly npm dependencies
 * Update dependencies to latest versions
 * Introduce resolution to array ('resolve-to-array', 'passthru-array' and 'to-array' modules)
