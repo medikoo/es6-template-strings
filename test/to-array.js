@@ -14,5 +14,5 @@ module.exports = function (t, a) {
 	a.deep(t('${x.raz} \\${$\\{ f${prik()}oo ${maroko}\n\\$mis\\1k' +
 		'\\2o${markas()}${x.moled}ech${}eloo${x.su}elo${marko', context),
 		['', 'raz1', ' ${$\\{ f', 23, 'oo ', 'morek', '\n$mis\\1k\\2o', 'morda', '',
-			'eho', 'ech', '', 'eloo', x, 'elo${marko']);
+			'eho', 'ech', undefined, 'eloo', x, 'elo${marko']);
 };

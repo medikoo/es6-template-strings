@@ -16,5 +16,5 @@ module.exports = function (t, a) {
 	obj = { raz: 'raz1', prik2: 23, foo: 'morda', moled: 'eho', su: x };
 	context.x = obj;
 	a.deep(t(compiled, context), ['', 'raz1', ' ${$\\{ f', 23, 'oo ', 'morek',
-		'\n$mis\\1k\\2o', 'morda', '', 'eho', 'ech', '', 'eloo', x, 'elo${marko']);
+		'\n$mis\\1k\\2o', 'morda', '', 'eho', 'ech', undefined, 'eloo', x, 'elo${marko']);
 };

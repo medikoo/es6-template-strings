@@ -16,7 +16,7 @@ module.exports = function (data, context) {
 	argValues = names.map(function (name) { return context[name]; });
 	return [data.literals].concat(map.call(data.substitutions, function (expr) {
 		var resolver;
-		if (!expr) return '';
+		if (!expr) return undefined;
 		try {
 			resolver = new Function(argNames, 'return (' + expr + ')');
 		} catch (e) {
