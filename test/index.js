@@ -14,4 +14,6 @@ module.exports = function (t, a) {
 	a(t('${x.raz} \\${$\\{ f${prik()}oo ${maroko}\n\\$mis\\1k' +
 		'\\2o${markas()}${x.moled}ech${}eloo${x.su}elo${marko', context),
 		'raz1 ${$\\{ f23oo morek\n$mis\\1k\\2omordaehoecheloovivielo${marko');
+
+	a(t('${ raz }marko ${ elo }', obj, { partial: true }), 'raz1marko ${ elo }');
 };
