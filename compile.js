@@ -1,6 +1,8 @@
 'use strict';
 
-var i, current, literals, substitutions, sOut, sEscape, sAhead, sIn, sInEscape, template;
+var esniff = require('esniff')
+
+  , i, current, literals, substitutions, sOut, sEscape, sAhead, sIn, sInEscape, template;
 
 sOut = function (char) {
 	if (char === '\\') return sEscape;
@@ -27,13 +29,20 @@ sAhead = function (char) {
 	return sOut;
 };
 sIn = function (char) {
-	if (char === '\\') return sInEscape;
-	if (char === '}') {
-		substitutions.push(current);
+	var code = template.slice(i), end;
+	esniff(code, '}', function (j) {
+		if (esniff.nest >= 0) return esniff.next();
+		end = j;
+	});
+	if (end != null) {
+		substitutions.push(template.slice(i, i + end));
+		i += end;
 		current = '';
 		return sOut;
 	}
-	current += char;
+	end = code.length;
+	i += end;
+	current += code;
 	return sIn;
 };
 sInEscape = function (char) {
