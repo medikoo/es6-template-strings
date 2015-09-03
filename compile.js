@@ -1,6 +1,6 @@
 'use strict';
 
-var current, literals, substitutions, sOut, sEscape, sAhead, sIn, sInEscape;
+var i, current, literals, substitutions, sOut, sEscape, sAhead, sIn, sInEscape;
 
 sOut = function (char) {
 	if (char === '\\') return sEscape;
@@ -43,7 +43,7 @@ sInEscape = function (char) {
 };
 
 module.exports = function (str) {
-	var length, state, i, result;
+	var length, state, result;
 	current = '';
 	literals = [];
 	substitutions = [];
