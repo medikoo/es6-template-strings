@@ -1,3 +1,11 @@
+v2.0.0  --  2015.09.03
+* Fix templates resolution. Since this update, internal string is parsed as
+  valid JavaScrip code, there for any '}' characters used as code continuation (or string insert)
+  won't break resolution of template. Issue #3
+* Resolve non returning expressions to undefined (instead of '')
+* Improve `resolve` logic
+* Support 'partial' option
+
 v1.0.0  --  2015.06.23
 * Fix bug related to '$${' resolution
 * Improve error reporting
