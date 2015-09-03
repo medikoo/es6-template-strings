@@ -1,6 +1,6 @@
 'use strict';
 
-var i, current, literals, substitutions, sOut, sEscape, sAhead, sIn, sInEscape;
+var i, current, literals, substitutions, sOut, sEscape, sAhead, sIn, sInEscape, template;
 
 sOut = function (char) {
 	if (char === '\\') return sEscape;
@@ -48,11 +48,11 @@ module.exports = function (str) {
 	literals = [];
 	substitutions = [];
 
-	str = String(str);
-	length = str.length;
+	template = String(str);
+	length = template.length;
 
 	state = sOut;
-	for (i = 0; i < length; ++i) state = state(str[i]);
+	for (i = 0; i < length; ++i) state = state(template[i]);
 	if (state === sOut) {
 		literals.push(current);
 	} else if (state === sEscape) {
