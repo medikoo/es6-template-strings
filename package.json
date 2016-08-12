@@ -1,6 +1,6 @@
 {
   "name": "es6-template-strings",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Compile and resolve template strings notation as specified in ES6",
   "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
   "keywords": [

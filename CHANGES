@@ -1,3 +1,6 @@
+v2.0.1  --  2016.08.12
+* Fix handling of context with properties named with invalid variable names (#5)
+
 v2.0.0  --  2015.09.03
 * Fix templates resolution. Since this update, internal string is parsed as
   valid JavaScrip code, there for any '}' characters used as code continuation (or string insert)
