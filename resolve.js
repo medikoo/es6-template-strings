@@ -1,7 +1,8 @@
 'use strict';
 
-var value     = require('es5-ext/object/valid-value')
-  , normalize = require('es5-ext/object/normalize-options')
+var value          = require('es5-ext/object/valid-value')
+  , normalize      = require('es5-ext/object/normalize-options')
+  , isVarNameValid = require('esniff/is-var-name-valid')
 
   , map = Array.prototype.map, keys = Object.keys
   , stringify = JSON.stringify;
@@ -11,7 +12,7 @@ module.exports = function (data, context/*, options*/) {
 
 	(value(data) && value(data.literals) && value(data.substitutions));
 	context = normalize(context);
-	names = keys(context);
+	names = keys(context).filter(isVarNameValid);
 	argNames = names.join(', ');
 	argValues = names.map(function (name) { return context[name]; });
 	return [data.literals].concat(map.call(data.substitutions, function (expr) {
