@@ -21,11 +21,11 @@
     "url": "git://github.com/medikoo/es6-template-strings.git"
   },
   "dependencies": {
-    "es5-ext": "^0.10.7",
-    "esniff": "1"
+    "es5-ext": "^0.10.12",
+    "esniff": "^1.1"
   },
   "devDependencies": {
-    "tad": "^0.2.3",
+    "tad": "^0.2.4",
     "xlint": "^0.2.2",
     "xlint-jslint-medikoo": "^0.1.4"
   },
