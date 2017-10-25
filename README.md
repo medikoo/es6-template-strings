@@ -3,6 +3,8 @@
 
 ### Usage
 
+Basic example:
+
 ```javascript
 
 var template = require('es6-template-strings');
@@ -31,6 +33,25 @@ var customTag = function (literals/*, …substitutions*/) {
 
 // Output template processed by customTag:
 customTag.apply(null, resolve(compiled, {/* context */}));
+```
+
+#### Partial resolution of a template
+
+With `partial: true` option, it's possible to resolve just some variables from a template.
+It's useful when we want to resolve template in more than one pass.
+
+```javascript
+
+var partialTemplate = template(
+  'Hello ${place.toUpperCase()}! Today is ${day}',
+  { place: "World" },
+  { partial: true }
+); // Hello WORLD! Today is ${day}
+
+template(partialTemplate, { day: "Tuesday" }); // Hello WORLD! Today is Tuesday
+
+// Same way `partial` option can go to any resolve* util, e.g.:
+resolveToString(compiled, { place: "World" }, { partial: true });
 ```
 
 ### Installation
