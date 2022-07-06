@@ -68,3 +68,7 @@ You can easily bundle _es6-template-strings_ for browser with [modules-webmake](
 ## Tests [![Build Status](https://travis-ci.org/medikoo/es6-template-strings.png)](https://travis-ci.org/medikoo/es6-template-strings)
 
 	$ npm test
+
+## Security contact information
+
+To report a security vulnerability, please use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
